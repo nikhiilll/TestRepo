@@ -7,8 +7,8 @@ on:
     types: [opened, labeled]
   issue_comment:
     types: [created]
-# env:
-#   MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+env:
+  MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
 
 jobs:
   assign_one_project:
@@ -19,7 +19,7 @@ jobs:
       uses: srggrs/assign-one-project-github-action@1.2.1
       if: github.event.action == 'opened'
       with:
-        project: 'https://github.com/users/nikhiilll/projects/1'
+        project: 'https://github.com/orgs/Test-Org-Nikhil/projects/1'
 
 #     - name: Assign issues and pull requests with `bug` label to project 3
 #       uses: srggrs/assign-one-project-github-action@1.2.1
